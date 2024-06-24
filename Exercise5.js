@@ -3,8 +3,8 @@ function getMaxGifts(giftsCities, maxGifts, maxCities) {
     let counter = 0;
     
     giftsCities.sort((first, next) => next - first);
-    giftsCities.forEach((giftsCount, index) => {
-        if (result + giftsCount <= maxGifts && counter < maxCities) {
+    giftsCities.forEach((giftsCount) => {
+        if (result + giftsCount <= maxGifts && counter <= maxCities) {
             result += giftsCount;
             counter++;
         }
